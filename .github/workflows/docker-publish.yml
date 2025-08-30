@@ -117,4 +117,5 @@ jobs:
 
       - name: Deploy to Kubernetes cluster
         run: |
-          helm upgrade --install flask ./charts/flask -f ./charts/flask/values.yaml --set image.tag=${{ steps.meta.outputs.version }}
+          SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)
+          helm upgrade --install flask ./charts/flask -f ./charts/flask/values.yaml --set image.tag=$SHORT_SHA
