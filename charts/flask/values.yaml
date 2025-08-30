@@ -14,7 +14,8 @@ image:
   tag: "main"
 
 # This is for the secrets for pdocker pull ghcr.io/danielaflalo95/helm-cicd:sha256-f8d9287b8398eb86cb840a7edbd1bbe1b03565e202c2ae73337bd08b25b71e98.sigulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
-imagePullSecrets: []
+imagePullSecrets:
+  - name: regcred
 # This is to override the chart name.
 nameOverride: ""
 fullnameOverride: ""
