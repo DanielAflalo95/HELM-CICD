@@ -23,7 +23,7 @@ env:
 jobs:
   build:
 
-    runs-on: runnerdeploy-nhpr6-lkbnz
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write
